@@ -36,7 +36,7 @@ Please note that for `calcCidadao::return_inflation()` you must also provide the
 
 # Warning
 
-Because `calcCidadao` relies on websraping to extract data from the Calculadora do Cidadão website by web scraping, it can be quite slow for large requests.
+Because `calcCidadao` relies on web scraping to extract data from the Calculadora do Cidadão website, it can be quite slow for large requests.
 
 
 
