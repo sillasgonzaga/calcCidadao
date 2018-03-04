@@ -86,7 +86,7 @@ return_tr <- function(start_date, end_date){
   end_date = format_date_request(end_date, "dmy")
   #valorCorrecao = 1
 
-  url_request <- "https://www3.bcb.gov.br/CALCIDADAO/publico/corrigirPelaTR.do?method=corrigirPelaTR&aba=2&dataInicioSerie=01%2F01%2F2015&dataVencimentoSerie=01%2F01%2F2017&dataEfetivoPagamento=&valorCorrecao=1%2C00"
+  url_request <- "https://www3.bcb.gov.br/CALCIDADAO/publico/corrigirPelaTR.do?method=corrigirPelaTR&aba=2&dataInicioSerie={start_date}&dataVencimentoSerie={end_date}&dataEfetivoPagamento=&valorCorrecao=1%2C00"
   url_request <- as.character(glue::glue(url_request))
 
   out <- scrape(url_request)
