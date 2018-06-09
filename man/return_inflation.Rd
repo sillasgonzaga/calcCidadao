@@ -22,7 +22,11 @@ Returns the adjustment return of a selected Brazilian inflation index.
 See data(inflation_indices) for all possible values.
 }
 \examples{
+\dontrun{
 return_inflation("IGP-M", as.Date("2010-01-01"), as.Date("2017-01-01"))
+}
 # To adjust a value:
+\dontrun{
 100 * return_inflation("IGP-M", as.Date("2010-01-01"), as.Date("2017-01-01"))
+}
 }

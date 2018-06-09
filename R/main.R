@@ -32,9 +32,13 @@ inflation_indices <- function(){
 #' @return A numeric vector of length 1.
 #' The adjustament return rate from `start_date` to `end_date`
 #' @examples
+#' \dontrun{
 #' return_inflation("IGP-M", as.Date("2010-01-01"), as.Date("2017-01-01"))
+#' }
 #' # To adjust a value:
+#' \dontrun{
 #' 100 * return_inflation("IGP-M", as.Date("2010-01-01"), as.Date("2017-01-01"))
+#' }
 #' @export
 return_inflation <- function(index, start_date, end_date){
 
@@ -50,7 +54,7 @@ return_inflation <- function(index, start_date, end_date){
   inflation <- inflation_indices()
 
   index <- toupper(index)
-  match.arg(index, names(inflation), several.ok = FALSE)
+  index <- match.arg(index, names(inflation), several.ok = FALSE)
 
   # request parameters
   index = unname(inflation[names(inflation) == index]) #selIndice
@@ -76,7 +80,9 @@ return_inflation <- function(index, start_date, end_date){
 #'
 #' @return A numeric vector of length 1.
 #' @examples
+#' \dontrun{
 #' return_tr(as.Date("2010-01-01"), as.Date("2017-01-01"))
+#' }
 #' @export
 return_tr <- function(start_date, end_date){
   # TODO: ADD PAYMENT DATE
@@ -102,7 +108,9 @@ return_tr <- function(start_date, end_date){
 #'
 #' @return A numeric vector of length 1.
 #' @examples
+#' \dontrun{
 #' return_poupanca(as.Date("2010-01-01"), as.Date("2017-01-01"))
+#' }
 #' @export
 return_poupanca <- function(start_date, end_date){
   # request parameters
@@ -129,7 +137,9 @@ return_poupanca <- function(start_date, end_date){
 #'
 #' @return A numeric vector of length 1.
 #' @examples
+#' \dontrun{
 #' return_selic(as.Date("2010-01-01"), as.Date("2017-01-01"))
+#' }
 #' @export
 return_selic <- function(start_date, end_date){
   start_date =  format_date_request(start_date, "dmy")
@@ -154,7 +164,9 @@ return_selic <- function(start_date, end_date){
 #'
 #' @return A numeric vector of length 1.
 #' @examples
+#' \dontrun{
 #' return_cdi(as.Date("2010-01-01"), as.Date("2017-01-01"))
+#' }
 #' @export
 return_cdi <- function(start_date, end_date, cdi_pct = 100){
   start_date =  format_date_request(start_date, "dmy")

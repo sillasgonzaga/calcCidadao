@@ -18,5 +18,7 @@ A numeric vector of length 1.
 Adjustment return of the Referential Rate.
 }
 \examples{
+\dontrun{
 return_tr(as.Date("2010-01-01"), as.Date("2017-01-01"))
+}
 }
